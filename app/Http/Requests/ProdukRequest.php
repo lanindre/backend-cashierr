@@ -11,7 +11,13 @@ class ProdukRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nama_produk' => 'required'
+            'category_id' => 'required',
+            'nama_produk' => 'required',
+            'price' => 'required',
+            'stok' => 'required',
+            'tag' => 'required',
+            'image' => 'required'
+
         ];
     }
     public function failedValidation(Validator $validator)
