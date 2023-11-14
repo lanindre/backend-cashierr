@@ -12,14 +12,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('produks', function (Blueprint $table) {
-            $table->bigIncrements('produk_id');
-            $table->integer('category_id');
-            $table->string('nama_produk', 100);
-            $table->double('price');
-            $table->string('stok', 5);
-            $table->string('tag', 100);
-            $table->string('image',100);
+        Schema::create('detail_transaksi', function (Blueprint $table) {
+            $table->bigIncrements('detail_id');
+            $table->foreignId('transaksi_id');
+            $table->foreignId('menu_id');
+            $table->integer('jumlah');
+            $table->double('subtotal');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
         });
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('produks');
+        Schema::dropIfExists('detail_transaksis');
     }
 };

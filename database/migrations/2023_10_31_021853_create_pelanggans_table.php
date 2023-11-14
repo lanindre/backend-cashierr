@@ -12,14 +12,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('produks', function (Blueprint $table) {
-            $table->bigIncrements('produk_id');
-            $table->integer('category_id');
-            $table->string('nama_produk', 100);
-            $table->double('price');
-            $table->string('stok', 5);
-            $table->string('tag', 100);
-            $table->string('image',100);
+        Schema::create('pelanggans', function (Blueprint $table) {
+            $table->bigIncrements('pelanggan_id');
+            $table->string('nama');
+            $table->string('email');
+            $table->integer('nomor_telepon');
+            $table->text('alamat');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
         });
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('produks');
+        Schema::dropIfExists('pelanggans');
     }
 };
