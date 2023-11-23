@@ -6,12 +6,17 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Contracts\Validation\Validator;
 
-class CategoryRequest extends FormRequest
+class PemesananRequest extends FormRequest
 {
     public function rules(): array
     {
         return [
-            'name' => 'required',
+            'meja' => 'required',
+            'tanggal_pemesanan' => 'required',
+            'jam_mulai' => 'required',
+            'jam_selesai' => 'required',
+            'nama_pemesan' => 'required',
+            'jumlah_pelanggan' => 'required'
         ];
     }
     public function failedValidation(Validator $validator)

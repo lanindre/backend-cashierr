@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Transaksi;
 use App\Http\Requests\StoreTransaksiRequest;
+use App\Http\Requests\TransaksiRequest;
 use App\Http\Requests\UpdateTransaksiRequest;
 
 class TransaksiController extends Controller
@@ -27,7 +28,7 @@ class TransaksiController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreTransaksiRequest $request)
+    public function store(TransaksiRequest $request)
     {
         //
     }
@@ -51,7 +52,7 @@ class TransaksiController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTransaksiRequest $request, Transaksi $transaksi)
+    public function update(TransaksiRequest $request, Transaksi $transaksi)
     {
         //
     }

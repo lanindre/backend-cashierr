@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Meja;
+use App\Models\Menu;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
-class MejaPolicy
+class MenuPolicy
 {
     /**
      * Determine whether the user can view any models.
@@ -19,7 +19,7 @@ class MejaPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Meja $meja): bool
+    public function view(User $user, Menu $menu): bool
     {
         //
     }
@@ -35,7 +35,7 @@ class MejaPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Meja $meja): bool
+    public function update(User $user, Menu $menu): bool
     {
         //
     }
@@ -43,7 +43,7 @@ class MejaPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Meja $meja): bool
+    public function delete(User $user, Menu $menu): bool
     {
         //
     }
@@ -51,7 +51,7 @@ class MejaPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Meja $meja): bool
+    public function restore(User $user, Menu $menu): bool
     {
         //
     }
@@ -59,7 +59,7 @@ class MejaPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Meja $meja): bool
+    public function forceDelete(User $user, Menu $menu): bool
     {
         //
     }

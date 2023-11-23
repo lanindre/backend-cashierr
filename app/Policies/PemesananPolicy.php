@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
+use App\Models\Pemesanan;
 use App\Models\User;
-use App\Models\pemesanan;
 use Illuminate\Auth\Access\Response;
 
 class PemesananPolicy
@@ -19,7 +19,7 @@ class PemesananPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, pemesanan $pemesanan): bool
+    public function view(User $user, Pemesanan $pemesanan): bool
     {
         //
     }
@@ -35,7 +35,7 @@ class PemesananPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, pemesanan $pemesanan): bool
+    public function update(User $user, Pemesanan $pemesanan): bool
     {
         //
     }
@@ -43,7 +43,7 @@ class PemesananPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, pemesanan $pemesanan): bool
+    public function delete(User $user, Pemesanan $pemesanan): bool
     {
         //
     }
@@ -51,7 +51,7 @@ class PemesananPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, pemesanan $pemesanan): bool
+    public function restore(User $user, Pemesanan $pemesanan): bool
     {
         //
     }
@@ -59,7 +59,7 @@ class PemesananPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, pemesanan $pemesanan): bool
+    public function forceDelete(User $user, Pemesanan $pemesanan): bool
     {
         //
     }
